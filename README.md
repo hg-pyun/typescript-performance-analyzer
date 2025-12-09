@@ -1,5 +1,8 @@
 # tpa - TypeScript Performance Analyzer
 
+<img width="1024" height="559" alt="image" src="https://github.com/user-attachments/assets/d7e8ce13-7f59-49be-ae1a-447a1a6f32c6" />
+
+
 Analyze TypeScript compiler performance by parsing `--generateTrace` output and generating interactive HTML reports.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -14,6 +17,10 @@ Analyze TypeScript compiler performance by parsing `--generateTrace` output and 
 - **Terminal Summary**: Quick colorful summary output without HTML generation
 - **One-step Analysis**: Generate trace and analyze in a single command
 - **Self-contained HTML**: Offline-capable single-file report with no server required
+
+<img width="1648" height="1289" alt="image" src="https://github.com/user-attachments/assets/85b387b7-0d52-4fb5-9a93-5f4ef3ba3405" />
+
+
 
 ## Requirements
 
