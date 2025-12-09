@@ -1,0 +1,134 @@
+/* ===== CSS Variables & Theming ===== */
+
+:root {
+  /* Typography - shared between themes */
+  --font-sans:
+    'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', 'SF Mono', Monaco, monospace;
+
+  /* Font sizes - shared between themes */
+  --text-xs: 0.6875rem;
+  --text-sm: 0.75rem;
+  --text-base: 0.8125rem;
+  --text-md: 0.875rem;
+  --text-lg: 1rem;
+  --text-xl: 1.125rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 2rem;
+
+  /* Phase colors - shared between themes */
+  --parse-color: #3b82f6;
+  --bind-color: #10b981;
+  --check-color: #f59e0b;
+  --emit-color: #8b5cf6;
+
+  /* Performance colors - shared between themes */
+  --perf-critical: #ef4444;
+  --perf-warning: #f59e0b;
+  --perf-normal: #22c55e;
+}
+
+/* Dark Theme (default) - shadcn zinc palette */
+:root,
+[data-theme='dark'] {
+  --bg-primary: #09090b;
+  --bg-secondary: #18181b;
+  --bg-tertiary: #27272a;
+  --sub-header-bg: #18181b;
+  --text-primary: #fafafa;
+  --text-secondary: #a1a1aa;
+  --text-muted: #71717a;
+  --accent: #38bdf8;
+  --accent-hover: #0ea5e9;
+
+  --border-color: #27272a;
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+
+  /* Glass morphism */
+  --glass-bg: rgba(24, 24, 27, 0.8);
+  --glass-border: rgba(161, 161, 170, 0.15);
+  --glass-blur: blur(12px);
+
+  /* Gradients */
+  --bg-gradient-primary: linear-gradient(135deg, #09090b 0%, #18181b 100%);
+  --bg-gradient-card: linear-gradient(145deg, #18181b 0%, #27272a 100%);
+  --accent-gradient: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
+  --accent-glow: 0 0 20px rgba(56, 189, 248, 0.3);
+
+  /* Code display */
+  --code-bg: #09090b;
+  --code-border: #27272a;
+  --code-highlight: rgba(56, 189, 248, 0.1);
+
+  /* Enhanced shadows */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.5);
+  --shadow-glow: 0 0 40px rgba(56, 189, 248, 0.15);
+
+  /* Syntax highlighting */
+  --syntax-comment: #6a737d;
+  --syntax-keyword: #ff79c6;
+  --syntax-string: #a5d6ff;
+  --syntax-function: #d2a8ff;
+  --syntax-number: #79c0ff;
+  --syntax-operator: #ff7b72;
+  --syntax-class: #7ee787;
+  --syntax-variable: #ffa657;
+  --syntax-punctuation: #8b949e;
+  --syntax-tag: #7ee787;
+  --syntax-attr-name: #79c0ff;
+  --syntax-attr-value: #a5d6ff;
+}
+
+/* Light Theme - shadcn zinc palette */
+[data-theme='light'] {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f4f4f5;
+  --bg-tertiary: #e4e4e7;
+  --sub-header-bg: #e4e4e7;
+  --text-primary: #09090b;
+  --text-secondary: #3f3f46;
+  --text-muted: #71717a;
+  --accent: #0284c7;
+  --accent-hover: #0369a1;
+
+  --border-color: #e4e4e7;
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+
+  /* Glass morphism */
+  --glass-bg: rgba(244, 244, 245, 0.8);
+  --glass-border: rgba(63, 63, 70, 0.15);
+  --glass-blur: blur(12px);
+
+  /* Gradients */
+  --bg-gradient-primary: linear-gradient(135deg, #ffffff 0%, #f4f4f5 100%);
+  --bg-gradient-card: linear-gradient(145deg, #f4f4f5 0%, #e4e4e7 100%);
+  --accent-gradient: linear-gradient(135deg, #0284c7 0%, #6366f1 100%);
+  --accent-glow: 0 0 20px rgba(2, 132, 199, 0.2);
+
+  /* Code display */
+  --code-bg: #f4f4f5;
+  --code-border: #e4e4e7;
+  --code-highlight: rgba(2, 132, 199, 0.1);
+
+  /* Enhanced shadows */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.15);
+  --shadow-glow: 0 0 40px rgba(2, 132, 199, 0.1);
+
+  /* Syntax highlighting */
+  --syntax-comment: #6a737d;
+  --syntax-keyword: #d63384;
+  --syntax-string: #0550ae;
+  --syntax-function: #8250df;
+  --syntax-number: #0550ae;
+  --syntax-operator: #cf222e;
+  --syntax-class: #116329;
+  --syntax-variable: #953800;
+  --syntax-punctuation: #57606a;
+  --syntax-tag: #116329;
+  --syntax-attr-name: #0550ae;
+  --syntax-attr-value: #0a3069;
+}

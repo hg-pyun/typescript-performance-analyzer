@@ -1,0 +1,345 @@
+/* ===== HotspotTable Styles ===== */
+
+.hotspot-table-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow: hidden;
+  background: transparent;
+}
+
+/* ===== Compact Header for Sidebar ===== */
+
+.hotspot-header-compact {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding-bottom: 0.75rem;
+  margin-bottom: 0.75rem;
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.hotspot-header-compact .search-wrapper {
+  flex: 1;
+  min-width: 0;
+  max-width: none;
+}
+
+.sort-select-compact {
+  padding: 0.375rem 0.5rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 0.375rem;
+  color: var(--text-secondary);
+  font-size: var(--text-xs);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.sort-select-compact:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.file-count-badge {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  background: var(--bg-secondary);
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-family: var(--font-mono);
+  flex-shrink: 0;
+}
+
+/* ===== File List Container ===== */
+
+.file-list-container {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 0.5rem;
+}
+
+.file-list-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.file-list-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.file-list-container::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 3px;
+}
+
+.file-list-container::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+/* ===== File Row ===== */
+
+.file-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: background-color 0.15s;
+  border-left: 2px solid transparent;
+}
+
+.file-row:hover {
+  background: var(--bg-secondary);
+}
+
+.file-row.selected {
+  background: rgba(56, 189, 248, 0.1);
+  border-left-color: var(--accent);
+}
+
+.file-row.selected .file-name {
+  color: var(--accent);
+}
+
+.file-row .file-icon {
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.file-row .file-name-container {
+  flex: 1;
+  min-width: 0;
+}
+
+.file-row .file-duration {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.empty-state-compact {
+  padding: 2rem 1rem;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: var(--text-sm);
+}
+
+/* ===== Legacy Header Styles ===== */
+
+.hotspot-header {
+  padding: 0 0 1rem 0;
+  border-bottom: 1px solid var(--glass-border);
+  margin-bottom: 1rem;
+}
+
+.hotspot-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.file-count {
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  background: var(--bg-secondary);
+  padding: 0.25rem 0.625rem;
+  border-radius: 9999px;
+}
+
+.hotspot-controls {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.search-wrapper {
+  position: relative;
+  flex: 1;
+  min-width: 150px;
+  max-width: 220px;
+}
+
+.search-wrapper svg {
+  position: absolute;
+  left: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  color: var(--text-muted);
+}
+
+.hotspot-search {
+  width: 100%;
+  padding: 0.375rem 0.5rem 0.375rem 2rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 0.375rem;
+  color: var(--text-primary);
+  font-size: var(--text-xs);
+  transition:
+    border-color 0.15s,
+    box-shadow 0.15s;
+}
+
+.hotspot-search:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.15);
+}
+
+.hotspot-search::placeholder {
+  color: var(--text-muted);
+}
+
+.sort-select {
+  padding: 0.5rem 0.75rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  color: var(--text-primary);
+  font-size: var(--text-sm);
+  cursor: pointer;
+}
+
+.sort-select:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+/* ===== File Cell Styling ===== */
+
+.file-cell {
+  max-width: 300px;
+}
+
+.file-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.file-icon {
+  font-size: 1.125rem;
+  flex-shrink: 0;
+}
+
+.file-name-container {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.file-name {
+  font-weight: 500;
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: var(--text-sm);
+}
+
+.file-path-dim {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ===== Mini Breakdown Bar ===== */
+
+.mini-breakdown {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.mini-duration {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--accent);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.duration-cell {
+  text-align: right;
+  white-space: nowrap;
+  min-width: 90px;
+}
+
+.file-duration {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.mini-bar {
+  display: flex;
+  flex: 1;
+  height: 6px;
+  border-radius: 3px;
+  overflow: hidden;
+  background: var(--bg-secondary);
+}
+
+/* ===== Duration Display ===== */
+
+.duration-display {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  min-width: 80px;
+}
+
+.duration-value {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.duration-bar {
+  height: 4px;
+  background: var(--bg-secondary);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.duration-fill {
+  height: 100%;
+  border-radius: 2px;
+  animation: barGrow 0.5s ease-out;
+  transform-origin: left;
+}
+
+/* ===== Row Hover and Selection ===== */
+
+.hotspot-row {
+  cursor: pointer;
+  transition:
+    background-color 0.15s,
+    border-color 0.15s;
+  border-left: 3px solid transparent;
+}
+
+.hotspot-row:hover {
+  background: var(--bg-secondary);
+}
+
+.hotspot-row.selected {
+  background: rgba(56, 189, 248, 0.1);
+  border-left-color: var(--accent);
+}
+
+.hotspot-row.selected .file-name {
+  color: var(--accent);
+}

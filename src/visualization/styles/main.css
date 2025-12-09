@@ -1,0 +1,34 @@
+/* ===== Main CSS - Import all style modules ===== */
+
+/* 1. Variables & Theming (must be first) */
+@import './variables.css';
+
+/* 2. Base styles & Reset */
+@import './base.css';
+
+/* 3. Layout */
+@import './layout.css';
+
+/* 4. Header */
+@import './header.css';
+
+/* 5. Cards & Stats */
+@import './card.css';
+
+/* 6. Phase bars & breakdown */
+@import './phase.css';
+
+/* 7. Hotspot table */
+@import './hotspot.css';
+
+/* 8. Panel (SlowLocationsPanel) */
+@import './panel.css';
+
+/* 9. Code blocks & syntax highlighting */
+@import './code.css';
+
+/* 10. Common components (inputs, buttons, tooltips) */
+@import './components.css';
+
+/* 11. Responsive styles (must be last) */
+@import './responsive.css';

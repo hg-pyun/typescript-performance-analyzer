@@ -1,0 +1,203 @@
+/* ===== Enhanced Code Block ===== */
+
+.enhanced-code-block {
+  margin: 0 0.75rem 0.75rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  border: 1px solid var(--code-border);
+}
+
+.code-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0.75rem;
+  background: var(--code-border);
+}
+
+.code-label,
+.code-language {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+}
+
+.code-content {
+  display: flex;
+  padding: 0.75rem;
+  background: var(--code-bg);
+  max-height: 200px;
+  overflow: auto;
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  line-height: 1.6;
+}
+
+.code-pre {
+  display: flex;
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  line-height: 1.6;
+}
+
+/* ===== Line Numbers ===== */
+
+.line-numbers {
+  display: flex;
+  flex-direction: column;
+  padding-right: 0.75rem;
+  margin-right: 0.75rem;
+  border-right: 1px solid var(--code-border);
+  color: var(--text-muted);
+  user-select: none;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.line-number {
+  line-height: 1.6;
+}
+
+.code-text {
+  flex: 1;
+  margin: 0;
+  white-space: pre-wrap;
+  word-break: break-word;
+  color: var(--text-primary);
+}
+
+.code-text code {
+  font-family: inherit;
+  line-height: 1.6;
+}
+
+/* ===== Enhanced Code Display ===== */
+
+.enhanced-code-display {
+  margin: 0.5rem 0.75rem 0.75rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  border: 1px solid var(--code-border);
+}
+
+/* ===== Copy Buttons ===== */
+
+.copy-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  background: var(--bg-secondary);
+  border: none;
+  border-radius: 4px;
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.copy-btn:hover {
+  background: var(--bg-tertiary);
+  color: var(--accent);
+}
+
+.copy-button {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.5rem;
+  background: transparent;
+  border: none;
+  border-radius: 4px;
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: color 0.15s;
+}
+
+.copy-button:hover {
+  color: var(--text-primary);
+}
+
+.copy-button svg {
+  opacity: 0.7;
+}
+
+/* ===== Prism.js Syntax Highlighting ===== */
+
+.code-text code[class*='language-'],
+.code-text pre[class*='language-'] {
+  color: var(--text-primary);
+  text-shadow: none;
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  line-height: 1.6;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: var(--syntax-comment);
+  font-style: italic;
+}
+
+.token.punctuation {
+  color: var(--syntax-punctuation);
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol {
+  color: var(--syntax-number);
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin {
+  color: var(--syntax-string);
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  color: var(--syntax-operator);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  color: var(--syntax-keyword);
+}
+
+.token.function,
+.token.class-name {
+  color: var(--syntax-function);
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+  color: var(--syntax-variable);
+}
+
+.token.tag {
+  color: var(--syntax-tag);
+}
+
+.token.attr-name {
+  color: var(--syntax-attr-name);
+}
+
+.token.attr-value {
+  color: var(--syntax-attr-value);
+}

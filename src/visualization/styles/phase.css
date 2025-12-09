@@ -1,0 +1,228 @@
+/* ===== Phase Bars ===== */
+
+.phase-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.5rem 0;
+}
+
+.phase-bar .label {
+  width: 50px;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.phase-bar .bar-container {
+  flex: 1;
+  height: 20px;
+  background: var(--bg-secondary);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.phase-bar .bar-fill {
+  height: 100%;
+  transition: width 0.3s ease;
+}
+
+.phase-bar .value {
+  width: 90px;
+  text-align: right;
+  font-size: 0.75rem;
+  font-family: 'SF Mono', Monaco, monospace;
+  color: var(--text-secondary);
+}
+
+/* ===== Phase Segments ===== */
+
+.phase-segment {
+  height: 100%;
+  transition: width 0.3s ease;
+}
+
+.phase-segment.parse {
+  background: var(--parse-color);
+}
+.phase-segment.bind {
+  background: var(--bind-color);
+}
+.phase-segment.check {
+  background: var(--check-color);
+}
+.phase-segment.emit {
+  background: var(--emit-color);
+}
+
+/* ===== Enhanced Phase Breakdown ===== */
+
+.combined-phase-bar {
+  display: flex;
+  height: 32px;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.combined-segment {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.combined-segment:hover,
+.combined-segment.highlighted {
+  filter: brightness(1.15);
+  transform: scaleY(1.08);
+}
+
+.segment-label {
+  font-size: var(--text-xs);
+  font-weight: 500;
+  color: white;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== Phase Bars List ===== */
+
+.phase-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.phase-bar-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem;
+  border-radius: 0.375rem;
+  transition: background-color 0.15s;
+}
+
+.phase-bar-item.highlighted {
+  background: var(--bg-secondary);
+}
+
+.phase-label-section {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 60px;
+}
+
+.phase-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+}
+
+.phase-name {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+}
+
+.phase-bar-container {
+  flex: 1;
+  height: 8px;
+  background: var(--bg-secondary);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.phase-bar-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.5s ease-out;
+  animation: barGrow 0.5s ease-out;
+  transform-origin: left;
+}
+
+.phase-value-section {
+  display: flex;
+  gap: 0.5rem;
+  align-items: baseline;
+  min-width: 110px;
+  justify-content: flex-end;
+}
+
+.phase-duration {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--text-primary);
+}
+
+.phase-percentage {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  min-width: 45px;
+  text-align: right;
+}
+
+/* ===== Fullwidth Summary Phase Styles ===== */
+
+.summary-section-fullwidth .phase-breakdown-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+}
+
+.summary-section-fullwidth .combined-phase-bar {
+  width: 100%;
+  height: 6px;
+  margin-bottom: 0;
+  border-radius: 3px;
+}
+
+.summary-section-fullwidth .phase-bars {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.summary-section-fullwidth .phase-bar-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0;
+  background: transparent;
+}
+
+.summary-section-fullwidth .phase-bar-container {
+  display: none;
+}
+
+.summary-section-fullwidth .phase-label-section {
+  width: auto;
+  gap: 0.25rem;
+}
+
+.summary-section-fullwidth .phase-indicator {
+  width: 6px;
+  height: 6px;
+  border-radius: 1px;
+}
+
+.summary-section-fullwidth .phase-name {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+}
+
+.summary-section-fullwidth .phase-value-section {
+  min-width: auto;
+  gap: 0.25rem;
+}
+
+.summary-section-fullwidth .phase-duration {
+  font-size: var(--text-xs);
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.summary-section-fullwidth .phase-percentage {
+  display: none;
+}
