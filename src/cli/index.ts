@@ -42,8 +42,9 @@ program
   .command('trace')
   .description('Generate trace from TypeScript project and analyze in one step')
   .argument(
-    '<project-path>',
-    'Path to TypeScript project (containing tsconfig.json)'
+    '[project-path]',
+    'Path to TypeScript project (containing tsconfig.json)',
+    '.'
   )
   .option('-o, --output <path>', 'Output HTML file path', './tsc-report.html')
   .option('--open', 'Open report in browser after generation')

@@ -1,6 +1,6 @@
 {
   "name": "typescript-performance-analyzer",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "TypeScript compilation performance analyzer",
   "author": "hg-pyun",
   "license": "MIT",

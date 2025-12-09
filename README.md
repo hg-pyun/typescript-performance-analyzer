@@ -35,12 +35,18 @@ npm install -g typescript-performance-analyzer
 Or run directly with npx:
 
 ```bash
-npx typescript-performance-analyzer trace ./my-project
+npx typescript-performance-analyzer trace
 ```
 
 ## Quick Start
 
-Simply specify your TypeScript project path to generate trace and analyze in one step:
+Run in your TypeScript project directory to generate trace and analyze:
+
+```bash
+tpa trace --open
+```
+
+Or specify a project path:
 
 ```bash
 tpa trace ./my-project --open
@@ -53,12 +59,12 @@ tpa trace ./my-project --open
 Run trace generation and HTML report generation in a single command.
 
 ```bash
-tpa trace <project-path> [options]
+tpa trace [project-path] [options]
 ```
 
 **Arguments:**
 
-- `<project-path>`: Path to TypeScript project (containing tsconfig.json)
+- `[project-path]`: Path to TypeScript project (containing tsconfig.json). Defaults to current directory (`.`)
 
 **Options:**
 
@@ -77,14 +83,17 @@ tpa trace <project-path> [options]
 **Examples:**
 
 ```bash
-# Basic usage
+# Analyze current directory
+tpa trace --open
+
+# Analyze specific project
 tpa trace ./my-project --open
 
 # Run with skipLibCheck
-tpa trace ./my-project --tsc-args "--skipLibCheck" --open
+tpa trace --tsc-args "--skipLibCheck" --open
 
 # Keep trace files after analysis
-tpa trace ./my-project --keep-trace -o analysis.html
+tpa trace --keep-trace -o analysis.html
 ```
 
 ### `tpa analyze` - Generate HTML Report
