@@ -15,6 +15,9 @@ Analyze TypeScript compiler performance by parsing `--generateTrace` output and 
 - **One-step Analysis**: Generate trace and analyze in a single command
 - **Self-contained HTML**: Offline-capable single-file report with no server required
 
+<img width="1651" height="1294" alt="image" src="https://github.com/user-attachments/assets/ed42b2a6-a057-42e8-a945-beab8d1996dd" />
+
+
 ## Requirements
 
 - Node.js >= 18.0.0
