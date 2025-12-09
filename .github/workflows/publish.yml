@@ -3,6 +3,13 @@ name: Publish to NPM
 on:
   release:
     types: [published]
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Dry run (skip actual publish)'
+        required: false
+        default: false
+        type: boolean
 
 jobs:
   publish:
@@ -30,6 +37,13 @@ jobs:
         run: npm run build:cli
 
       - name: Publish to NPM
+        if: ${{ !inputs.dry_run }}
         run: npm publish --provenance --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Dry run (skip publish)
+        if: ${{ inputs.dry_run }}
+        run: |
+          echo "Dry run mode - skipping publish"
+          npm publish --dry-run
