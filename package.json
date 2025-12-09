@@ -2,10 +2,35 @@
   "name": "typescript-performance-analyzer",
   "version": "0.1.0",
   "description": "TypeScript compilation performance analyzer",
+  "author": "hg-pyun",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hg-pyun/typescript-performance-analyzer"
+  },
+  "homepage": "https://github.com/hg-pyun/typescript-performance-analyzer#readme",
+  "bugs": {
+    "url": "https://github.com/hg-pyun/typescript-performance-analyzer/issues"
+  },
+  "keywords": [
+    "typescript",
+    "performance",
+    "analyzer",
+    "profiler",
+    "tsc",
+    "trace",
+    "cli"
+  ],
   "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
   "bin": {
     "tpa": "./dist/cli/index.js"
   },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
