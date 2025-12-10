@@ -1,32 +1,28 @@
 # tpa - TypeScript Performance Analyzer
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Node.js](https://img.shields.io/badge/Node.js-%3E%3D18.0.0-green.svg)](https://nodejs.org/)
+
 <img width="1024" height="559" alt="image" src="https://github.com/user-attachments/assets/d7e8ce13-7f59-49be-ae1a-447a1a6f32c6" />
 
 
 Analyze TypeScript compiler performance by parsing `--generateTrace` output and generating interactive HTML reports.
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Node.js](https://img.shields.io/badge/Node.js-%3E%3D18.0.0-green.svg)](https://nodejs.org/)
+## Why TPA?
 
-## Features
+As TypeScript projects grow, compilation times increase dramatically. While TypeScript provides the `--generateTrace` option to generate compilation traces, manually analyzing tens of megabytes of JSON files is practically impossible.
 
-- **Streaming Parser**: Memory-efficient processing of large trace files using stream-json
-- **Interactive Visualization**: Timeline and hotspot analysis by compilation phase
-- **Per-file Analysis**: Breakdown of Parse, Bind, Check, and Emit time per file
-- **Code Snippet Extraction**: View actual source code at slow locations
-- **Terminal Summary**: Quick colorful summary output without HTML generation
-- **One-step Analysis**: Generate trace and analyze in a single command
-- **Self-contained HTML**: Offline-capable single-file report with no server required
+**TPA solves this problem:**
 
-<img width="1648" height="1289" alt="image" src="https://github.com/user-attachments/assets/85b387b7-0d52-4fb5-9a93-5f4ef3ba3405" />
+- **One Command**: Run `tpa trace --open` to generate traces and analyze them in one step
+- **Instant Insights**: Immediately identify which files are slowing down your compilation
+- **Detailed Analysis**: Time breakdown for each phase - Parse, Bind, Check, and Emit
+- **Source Code Context**: View actual code snippets at slow locations
+- **Large File Support**: Memory-efficient streaming parser handles large trace files
 
-
-
-## Requirements
-
-- Node.js >= 18.0.0
 
 ## Installation
+In your project
 
 ```bash
 npm install -g typescript-performance-analyzer
@@ -175,6 +171,18 @@ tpa summary <trace-dir> [options]
     ...
 ```
 
+## HTML Report Features
+
+<img width="1648" height="1289" alt="image" src="https://github.com/user-attachments/assets/85b387b7-0d52-4fb5-9a93-5f4ef3ba3405" />
+
+The generated HTML report includes:
+
+- **Overview Statistics**: Total duration, files processed, event count
+- **Hotspot Table**: Slowest files with phase breakdown and search/sort
+- **Location Analysis**: Slow code locations with SyntaxKind and snippets
+- **UI Features**: Dark/Light theme, collapsible sidebar, offline support
+
+
 ## Understanding Compilation Phases
 
 | Phase     | Description                                 |
@@ -183,15 +191,6 @@ tpa summary <trace-dir> [options]
 | **Bind**  | Binding declarations and setting up symbols |
 | **Check** | Type checking (usually the slowest phase)   |
 | **Emit**  | Generating JavaScript output files          |
-
-## HTML Report Features
-
-The generated HTML report includes:
-
-- **Overview Statistics**: Total duration, files processed, event count
-- **Hotspot Table**: Slowest files with phase breakdown and search/sort
-- **Location Analysis**: Slow code locations with SyntaxKind and snippets
-- **UI Features**: Dark/Light theme, collapsible sidebar, offline support
 
 ## License
 
