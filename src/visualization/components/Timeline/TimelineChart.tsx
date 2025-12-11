@@ -1,8 +1,8 @@
 import { useRef, useState, useCallback } from 'react';
 import { useVirtualizer } from '@tanstack/react-virtual';
 import type { FileEvents, ProcessedEvent } from '../../../parser/types';
-import { PHASE_COLORS, getCategoryColor } from '../../utils/colors';
-import { formatDuration } from '../../utils/formatters';
+import { PHASE_COLORS, getCategoryColor } from '../../../shared/constants';
+import { formatDuration } from '../../../shared/formatters';
 
 interface TimelineChartProps {
   files: FileEvents[];

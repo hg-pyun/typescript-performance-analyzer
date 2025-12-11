@@ -8,9 +8,9 @@ import {
   formatDuration,
   getFileIcon,
   formatKindName,
-} from '../../utils/formatters';
+} from '../../../shared/formatters';
 import { extractLocationsFromFile } from '../../../parser/location-aggregator';
-import { getKindGradient } from '../../utils/colors';
+import { getKindGradient } from '../../../shared/constants';
 import Prism from 'prismjs';
 import 'prismjs/components/prism-typescript';
 import 'prismjs/components/prism-jsx';

@@ -1,5 +1,5 @@
 import type { CompilationMetrics } from '../../../parser/types';
-import { formatDuration, formatEventCount } from '../../utils/formatters';
+import { formatDuration, formatEventCount } from '../../../shared/formatters';
 
 interface OverviewStatsProps {
   metrics: CompilationMetrics;

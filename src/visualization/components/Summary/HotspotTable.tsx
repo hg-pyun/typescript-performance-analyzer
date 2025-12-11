@@ -6,7 +6,7 @@ import {
   getFileIcon,
   getFileName,
   getDirectory,
-} from '../../utils/formatters';
+} from '../../../shared/formatters';
 
 interface HotspotTableProps {
   files: FileEvents[];

@@ -2,7 +2,7 @@ import { useState, useEffect, useMemo } from 'react';
 import type { ReportData, FileEvents } from '../parser/types';
 import { HotspotTable } from './components/Summary/HotspotTable';
 import { SlowLocationsPanel } from './components/Summary/SlowLocationsPanel';
-import { formatDuration, formatNumber } from './utils/formatters';
+import { formatDuration, formatNumber } from '../shared/formatters';
 
 type Theme = 'light' | 'dark';
 

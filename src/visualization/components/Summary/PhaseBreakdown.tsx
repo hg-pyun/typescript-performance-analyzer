@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import type { PhaseInfo } from '../../../parser/types';
-import { formatDuration } from '../../utils/formatters';
-import { PHASE_COLORS } from '../../utils/colors';
+import { formatDuration } from '../../../shared/formatters';
+import { PHASE_COLORS } from '../../../shared/constants';
 
 interface PhaseBreakdownProps {
   phases: PhaseInfo;
