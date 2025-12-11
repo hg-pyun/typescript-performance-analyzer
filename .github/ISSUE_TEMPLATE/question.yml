@@ -1,0 +1,36 @@
+name: Question
+description: Ask a question about usage or implementation
+title: "[Question]: "
+labels: ["question"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Have a question? We're here to help!
+
+  - type: textarea
+    id: question
+    attributes:
+      label: Your Question
+      description: What would you like to know?
+      placeholder: Describe your question in detail...
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Provide any relevant context that might help us answer your question.
+      placeholder: |
+        - What are you trying to achieve?
+        - What have you tried so far?
+        - Any relevant configuration or code snippets?
+
+  - type: checkboxes
+    id: checked-docs
+    attributes:
+      label: Documentation Check
+      options:
+        - label: I have checked the README and existing issues for an answer
+          required: true
