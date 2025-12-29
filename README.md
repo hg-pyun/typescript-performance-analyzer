@@ -180,7 +180,6 @@ The generated HTML report includes:
 - **Overview Statistics**: Total duration, files processed, event count
 - **Hotspot Table**: Slowest files with phase breakdown and search/sort
 - **Location Analysis**: Slow code locations with SyntaxKind and snippets
-- **UI Features**: Dark/Light theme, collapsible sidebar, offline support
 
 
 ## Understanding Compilation Phases
